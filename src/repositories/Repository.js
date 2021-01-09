@@ -17,6 +17,4 @@ axiosInstance.interceptors.request.use(
   }
 );
 
-axiosInstance.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-
 export default axiosInstance;
