@@ -1,6 +1,6 @@
 import Repository from "./Repository";
 
-const resource = "session";
+const resource = "session/";
 
 export default {
   createSession(payload) {
