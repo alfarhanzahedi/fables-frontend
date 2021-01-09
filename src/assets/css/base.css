@@ -1,0 +1,612 @@
+/*
+  base.css
+  This stylesheet contains all the styles and CSS classes used throughout the application.
+*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #dc3545;
+  --color-default: #272727;
+  --color-text: #272727;
+  --color-text-light: #3d3a38;
+  --color-background: #ffffff;
+  --color-link: #2c2c2c;
+  --color-link-hover: rgb(255, 194, 113);
+  --color-decorative: #d6ac96;
+  --color-highlight: #ffd484;
+}
+
+body {
+  color: var(--color-text) !important;
+}
+
+/*
+  Custom CSS classes used throughout the application.
+*/
+
+.border-bottom-default {
+  border-bottom: 2px solid var(--color-default) !important;
+}
+
+.border-bottom-danger {
+  border-bottom: 2px solid var(--red) !important;
+}
+
+.btn-default {
+  color: var(--color-background);
+  background-color: var(--color-text);
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  color: var(--color-background);
+  background-color: var(--color-text-light);
+  box-shadow: none;
+}
+
+/*
+  Overriding styles defined by Vue.
+*/
+.router-link-exact-active {
+  color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/*
+  Overriding styles defined by Bootstrap .
+*/
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+@import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  --color-text: #272727;
+  --color-text-light: #3d3a38;
+  --color-bg: #ffffff;
+  --color-link: #2c2c2c;
+  --color-link-hover: rgb(255, 194, 113);
+  --color-deco: #d6ac96;
+  --color-highlight: #ffd484;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+
+  font-family: "Nunito", sans-serif;
+  font-display: swap;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+button:focus {
+  outline: none;
+}
+
+/* Page Loader */
+.js .loading::before {
+  content: "";
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg);
+}
+
+.js .loading::after {
+  content: "";
+  position: fixed;
+  z-index: 100000;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin: -30px 0 0 -30px;
+  pointer-events: none;
+  border-radius: 50%;
+  opacity: 0.4;
+  background: var(--color-link);
+  animation: loaderAnim 0.7s linear infinite alternate forwards;
+}
+
+@keyframes loaderAnim {
+  to {
+    opacity: 1;
+    transform: scale3d(0.5, 0.5, 1);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-link);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hover);
+  outline: none;
+}
+
+.masthead {
+  margin-top: 40px;
+  height: 90vh;
+}
+
+.fix-in-position {
+  position: fixed;
+  top: 50px;
+  transition: all 0.2s ease-in;
+}
+
+.beta-flag {
+  color: orange;
+  background: rgba(255, 210, 125, 0.178);
+  padding: 2px 12px;
+  border-radius: 50px;
+  position: relative;
+  top: -20px;
+}
+
+.beta-flag-notop {
+  color: orange;
+  background: rgba(255, 210, 125, 0.178);
+  padding: 2px 5px;
+  border-radius: 50px;
+}
+
+.beta-flag-notop-1 {
+  color: orange;
+  background: rgba(255, 210, 125, 0.178);
+  padding: 6px 14px;
+  border-radius: 50px;
+}
+
+.beta-flag-notop-2 {
+  color: rgb(0, 119, 255);
+  background: rgba(125, 177, 255, 0.178);
+  padding: 6px 10px;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.element-wrapper {
+  background: rgb(247, 247, 247);
+  border-radius: 5px;
+  padding: 20px 10px 20px 20px;
+}
+/*------- Feed CSS ----------*/
+.card {
+  border: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.14);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card:hover {
+  box-shadow: 0 14px 18px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12);
+}
+
+/*------------ Other CSS -------------*/
+.hero_text {
+  background: black;
+  padding: 10px 20px;
+  color: white;
+}
+
+.article_title {
+  font-family: "Josefin Slab", serif;
+  font-display: swap;
+}
+
+.content {
+  position: relative;
+  align-items: center;
+  padding: 6rem 0 1rem 0;
+  counter-reset: figure;
+}
+
+.border-bottom {
+  border-bottom: 2px solid rgb(247, 247, 247);
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.img-small {
+  width: 80px;
+  margin: 10px;
+}
+
+.fill-img {
+  position: absolute;
+  height: 32.9%;
+}
+
+.img-left {
+  left: -5vw;
+}
+
+.img-right {
+  right: 0px;
+}
+
+.img-fluid-logo {
+  width: 50%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.description-box {
+  background-color: rgba(255, 228, 196, 0.808);
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.details-card {
+  width: 95vw;
+  padding: 20px 14px;
+  margin: 5px 1px;
+  border-radius: 5px;
+  position: relative;
+  top: -15vh;
+  left: -1vw;
+  background: #ffffff;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .space-bottom {
+    margin-bottom: 10vh;
+  }
+
+  .img-fluid-logo {
+    margin: 10px auto;
+    float: left;
+  }
+
+  .navbar-collapse {
+    padding-top: 15px;
+  }
+}
+
+.nav-item .nav-link {
+  color: var(--color-text);
+}
+
+.item {
+  margin: 5vh auto 15vh auto;
+  max-width: 100%;
+  will-change: transform;
+}
+
+input {
+  font-size: 1.3em;
+  padding: 10px 15px;
+  width: 90%;
+  border: none;
+  border-bottom: 2px solid var(--color-text);
+  transition: all 0.3s ease;
+}
+input:focus {
+  outline: none;
+}
+
+
+input ~ .focus-border{position: absolute; left: 0; width: 0; height: 1px; background-color: var(--color-text); transition: 0.4s;}
+input:focus ~ .focus-border{width: 100%; transition: 0.3s;}
+
+.input_label {
+	font-size: 1.3em;
+}
+
+input ~ .focus-border {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-text);
+  transition: 0.4s;
+}
+input:focus ~ .focus-border {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.input_label {
+  font-size: 1.3em;
+}
+.mobile_illustration {
+  display: none;
+}
+
+.button_lg {
+  width: 40%;
+  border: none;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+  padding: 15px 20px;
+  border-radius: 4px;
+  margin: 10px 0px;
+  float: left;
+  transition: all 0.2s ease;
+}
+
+.button_lg:hover,
+.button_lg:focus {
+  background-color: var(--color-text-light);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  input {
+    width: 100%;
+  }
+  input:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  .desktop_illustration {
+    display: none;
+  }
+
+  .mobile_illustration {
+    display: block;
+  }
+
+  .sign_in_button {
+    width: 100%;
+  }
+}
+
+/*--------Image Grid-----------------*/
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 1px;
+  grid-auto-rows: minmax(180px, auto);
+  grid-auto-flow: dense;
+}
+
+.grid-item {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #929796;
+  background-color: rgb(32, 32, 32);
+  padding: 10px;
+  border-radius: 1px;
+}
+
+.span-2 {
+  padding: 15px 20px 15px 15px;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+.span-2-col {
+  grid-column-end: span 2;
+}
+
+.lg-thumb-outer {
+  display: none;
+}
+
+/*-----------------------*
+
+/*Footer*/
+/*------------  Footer -------------*/
+#footer {
+  bottom: 0;
+  font-size: 13px;
+  width: 100%;
+  padding: 10px;
+  min-height: 50px;
+  background-color: rgb(20, 20, 20);
+}
+
+.white-text {
+  color: rgb(175, 175, 175);
+}
+.move-up {
+  margin-top: -10px;
+}
+
+footer a:hover {
+  color: white;
+  transition: all 0.5s ease;
+}
+
+/*------- Scrollbar --------------*/
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #3b6acf;
+}
+
+#take_code {
+  display: none;
+}
+
+.animation-slide-in {
+	position: relative;
+	animation: slideIn 0.7s;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    top: 20px;
+  }
+  to {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .animation-slide-in {
+    animation: slideInLittle 0.7s;
+  }
+
+  @keyframes slideInLittle {
+    from {
+      opacity: 0;
+      top: 8vh;
+    }
+    to {
+      opacity: 1;
+      top: 5vh;
+    }
+  }
+}
+
+/* ----------- Floating Nav ----------- */
+
+.secondary-nav {
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background: var(--color-bg);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-nav div {
+  color: var(--color-text);
+  font-size: 2rem;
+  line-height: 60px;
+  position: absolute;
+  top: 0;
+  left: 2%;
+  visibility: hidden;
+}
+
+.secondary-nav ul {
+  list-style-type: none;
+  margin: 4px auto;
+  padding-left: 0;
+  text-align: right;
+  max-width: 100%;
+}
+.secondary-nav ul li {
+  display: inline-block;
+  line-height: 38px;
+  padding: 4px 20px 1px 20px;
+  margin: 10px;
+}
+.secondary-nav ul li a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.link-active {
+  border-bottom: 2px solid var(--color-text);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .secondary-nav {
+    display: none;
+  }
+}
+
+/*-------------- Miscellaneous -----------------*/
+.float__right {
+  float: right;
+}
+
+.card_contact {
+  color: var(--color-text-light);
+  padding-left: 5px;
+}
+
+.card_contact i {
+  margin-right: 7px;
+}
+
+.contact_address {
+  font-size: 11px;
+  color: var(--color-text-light);
+}
+
+.card-phone {
+  float: right;
+  color: var(--color-text);
+  background-color: bisque;
+  padding: 15px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+}
+
+.btn-alternate {
+  color: var(--color-bg) !important;
+  background-color: var(--color-text);
+  padding: 8px 15px;
+  margin: 20px 15px 5px 0px;
+  border-radius: 3px;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+
+.spacer {
+  margin: 10vh;
+  height: 2vh;
+}
+
+.payment_button {
+  border: none;
+  outline: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(97, 100, 248);
+  padding: 10px 15px;
+  width: 100%;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+.coupon {
+  border-top: 5px solid rgb(255, 161, 84);
+  border-image: repeating-linear-gradient( 45deg, rgb(255, 230, 192), rgb(255, 230, 192) 1%, rgb(252, 147, 86) 1%, rgb(252, 147, 86) 8%) 10;
+}
+
+.org-card {
+  border-top: 5px solid rgb(84, 144, 255);
+  border-image: repeating-linear-gradient( 45deg, rgb(255, 231, 195), rgb(255, 231, 195) 1%, rgb(84, 144, 255) 1%, rgb(84, 144, 255) 8%) 10;
+}

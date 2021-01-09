@@ -1,0 +1,15 @@
+/*
+  fonts.css
+  This stylesheet contains all the external fonts used throughout the application.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
+
+.font-family__nunito {
+  font-family: "Nunito", sans-serif !important;
+}
+
+.font-family__josefin-slab {
+  font-family: "Josefin Slab", serif !important;
+}
