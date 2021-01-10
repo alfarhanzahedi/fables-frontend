@@ -4,6 +4,8 @@ Fables is a financial crowdsourcing platform designed to help small businesses k
 
 ## Install Instructions
 
+**Note**: You will need to deploy the backend for the app to work completely. Update the `baseURL` at `src/repositories/Repository.js` so as to point to the correct enpoint!
+
 ### For cool folks: 
 
 [![Deploy to DO](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/alfarhanzahedi/fables-frontend/tree/main)
