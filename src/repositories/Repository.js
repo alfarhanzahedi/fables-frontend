@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://captainpool.co/api/";
+const baseURL = "https://fables.captainpool.me/api/";
 
 let axiosInstance = axios.create({
   baseURL
