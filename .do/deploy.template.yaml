@@ -1,13 +1,14 @@
-name: fables-frontend
-region: fra
-static_sites:
-- build_command: npm run build
-  environment_slug: node-js
-  github:
-    branch: main
-    deploy_on_push: true
-    repo: alfarhanzahedi/fables-frontend
+spec:
   name: fables-frontend
-  catchall_document: index.html
-  routes:
-  - path: /
+  region: fra
+  static_sites:
+    - build_command: npm run build
+    environment_slug: node-js
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: alfarhanzahedi/fables-frontend
+    name: fables-frontend
+    catchall_document: index.html
+    routes:
+    - path: /
